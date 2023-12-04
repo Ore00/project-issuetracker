@@ -36,7 +36,8 @@
             crossorigin="anonymous"></script>
     <script>
       $(function() {
-        let currentProject = window.location.pathname.replace(/\//g, "");;
+        let currentProject = window.location.pathname.replace(/\//g, "");
+        console.log("Issue Page current project: ", currentProject);
         let url = "/api/issues/"+currentProject;
         $('#projectTitle').text('All issues for: '+currentProject)
         $.ajax({
